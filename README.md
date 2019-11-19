@@ -66,7 +66,7 @@ cd CNN && python train.py --auxiliary --cutout            # CIFAR-10
 cd CNN && python train_100.py --auxiliary --cutout            # CIFAR-100
 cd CNN && python train_100.py --auxiliary --cutout --init_channels 50            # CIFAR-100 with 50 initial chanels
 cd RNN && python train.py                                 # PTB
-
+```
 
 ## Architecture Visualization
 Package graphviz is required to visualize the learned cells, visulize the best reported architectures in this paper
