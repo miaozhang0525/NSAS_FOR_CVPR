@@ -74,4 +74,8 @@ Package graphviz is required to visualize the learned cells, visulize the best r
 cd CNN && python visualize.py Random_NSAS 
 cd RNN && python visualize.py Random_NSAS 
 ```
+mmmmmmmmmmmmmmmm
+llllllllllll
+
+llllll
 
