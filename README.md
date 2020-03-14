@@ -74,5 +74,6 @@ Package graphviz is required to visualize the learned cells, visulize the best r
 cd CNN && python visualize.py Random_NSAS 
 cd RNN && python visualize.py Random_NSAS 
 ```
-
+## Codes and Experimental results on NAS-Bench-201
+Please find these codes and results in https://drive.google.com/open?id=1D3JOWFbBkWeD1NLlgMvRvAMZ9wDLwL-K
 
