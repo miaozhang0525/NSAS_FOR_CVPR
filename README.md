@@ -1,5 +1,5 @@
 
-This repository is for the review of paper "Overcoming Multi-Model Forgetting in One-Shot NAS with Diversity Maximization" submitted to CVPR 2020
+This repository is for the review of paper "Diversity Maximization for Overcoming Catastrophic Forgetting in One-Shot Neural Architecture Search" submitted to IEEE TPAMI.
 
 
 ## Requirements
