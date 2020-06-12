@@ -1,5 +1,17 @@
 
-This repository is for the review of paper "Diversity Maximization for Overcoming Catastrophic Forgetting in One-Shot Neural Architecture Search" submitted to IEEE TPAMI.
+This repository is for the "Overcoming Multi-Model Forgetting in One-Shot NAS With Diversity Maximization" accepted by IEEE CVPR 2020.
+
+## Reference
+If you use our code in your research, please cite our paper accordingly.
+```
+@inproceedings{guo2018irlas,
+    title={Overcoming Multi-Model Forgetting in One-Shot NAS With Diversity Maximization},
+    author={Miao Zhang and Huiqi Li and Shirui Pan and Xiaojun Chang and Steven Su},
+    booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year={2020},
+}
+```
+
 
 
 ## Requirements
