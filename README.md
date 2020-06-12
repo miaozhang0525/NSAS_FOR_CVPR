@@ -82,11 +82,12 @@ Please find these codes and results in https://drive.google.com/open?id=1D3JOWFb
 ## Reference
 If you use our code in your research, please cite our paper accordingly.
 ```
-@inproceedings{guo2018irlas,
-    title={Overcoming Multi-Model Forgetting in One-Shot NAS With Diversity Maximization},
-    author={Miao Zhang and Huiqi Li and Shirui Pan and Xiaojun Chang and Steven Su},
-    booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-    year={2020},
+@inproceedings{zhang2020overcoming,
+  title={Overcoming Multi-Model Forgetting in One-Shot NAS with Diversity Maximization},
+  author={Zhang, Miao and Li, Huiqi and Pan, Shirui and Chang, Xiaojun and Su, Steven},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={7809--7818},
+  year={2020}
 }
 ```
 
