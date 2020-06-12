@@ -1,17 +1,6 @@
 
 This repository is for the "Overcoming Multi-Model Forgetting in One-Shot NAS With Diversity Maximization" accepted by IEEE CVPR 2020.
 
-## Reference
-If you use our code in your research, please cite our paper accordingly.
-```
-@inproceedings{guo2018irlas,
-    title={Overcoming Multi-Model Forgetting in One-Shot NAS With Diversity Maximization},
-    author={Miao Zhang and Huiqi Li and Shirui Pan and Xiaojun Chang and Steven Su},
-    booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-    year={2020},
-}
-```
-
 
 
 ## Requirements
@@ -88,4 +77,17 @@ cd RNN && python visualize.py Random_NSAS
 ```
 ## Codes and Experimental results on NAS-Bench-201
 Please find these codes and results in https://drive.google.com/open?id=1D3JOWFbBkWeD1NLlgMvRvAMZ9wDLwL-K
+
+
+## Reference
+If you use our code in your research, please cite our paper accordingly.
+```
+@inproceedings{guo2018irlas,
+    title={Overcoming Multi-Model Forgetting in One-Shot NAS With Diversity Maximization},
+    author={Miao Zhang and Huiqi Li and Shirui Pan and Xiaojun Chang and Steven Su},
+    booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year={2020},
+}
+```
+
 
