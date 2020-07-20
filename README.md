@@ -31,15 +31,6 @@ cd CNN && python test_100.py --auxiliary --model_path ./trained_models/Random_NS
 
 
 
-
-* Test on CIFAR10 with the best reported architecture with NSAS-C
-
-```
-cd CNN && python test.py --auxiliary --model_path ./trained_models/RandomNAS_C_CIFAR10/weights.pt --arch Random_NSAS_C
-```
-* Expected result: 2.50% test error rate with 3.08M model params.
-
-
 * Test on CIFAR100 with the best reported architecture with NSAS-C
 ```
 cd CNN && python test_100.py --auxiliary --model_path ./trained_models/Random_C_CIFAR100/weights.pt --arch Random_NSAS_C
