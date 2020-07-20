@@ -14,28 +14,47 @@ Please download the CIFAR100 dataset in https://www.cs.toronto.edu/~kriz/cifar-1
 ## Pretrained models
 
 
-* Test on CIFAR10 with the best reported architecture
+* Test on CIFAR10 with the best reported architecture with NSAS
 
 ```
-cd CNN && python test.py --auxiliary --model_path ./trained_models/Random_NSAS_CIFAR10_best.pt
+cd CNN && python test.py --auxiliary --model_path ./trained_models/Random_NSAS_CIFAR10_best.pt --arch Random_NSAS
 ```
 * Expected result: 2.50% test error rate with 3.08M model params.
 
 
 * Test on CIFAR100 with the best reported architecture with NSAS
 ```
-cd CNN && python test_100.py --auxiliary --model_path ./trained_models/Random_NSAS_CIFAR100.pt
+cd CNN && python test_100.py --auxiliary --model_path ./trained_models/Random_NSAS_CIFAR100.pt --arch Random_NSAS
 
 ```
 * Expected result: 17.56% top1 test error with 3.13M  model params.
 
 
+
+
+* Test on CIFAR10 with the best reported architecture with NSAS-C
+
+```
+cd CNN && python test.py --auxiliary --model_path ./trained_models/RandomNAS_C_CIFAR10/weights.pt --arch Random_NSAS_C
+```
+* Expected result: 2.50% test error rate with 3.08M model params.
+
+
 * Test on CIFAR100 with the best reported architecture with NSAS-C
 ```
-cd CNN && python test_100.py --auxiliary --model_path ./trained_models/Random-NSAS_C_CIFAR100/weights.pt
+cd CNN && python test_100.py --auxiliary --model_path ./trained_models/Random_C_CIFAR100/weights.pt --arch Random_NSAS_C
 
 ```
 * Expected result: 16.69% top1 test error with 3.59M  model params.
+
+
+
+* Test on ImageNET with the best reported architecture with NSAS-C
+```
+cd CNN && python test_imagenet.py --auxiliary --model_path ./trained_models/Random_NSAS_C_imagenet/model_best.pth.tar --arch  Random_NSAS_C 
+
+```
+* Expected result: 25.5% top1 test error with 5.4M  model params.
 
 
 
@@ -58,7 +77,7 @@ To evaluate our best cells by training from scratch, run
 ```
 cd CNN && python train.py --auxiliary --cutout            # CIFAR-10
 cd CNN && python train_100.py --auxiliary --cutout            # CIFAR-100
-cd CNN && python train_100.py --auxiliary --cutout --init_channels 50            # CIFAR-100 with 50 initial chanels
+cd CNN && python train_imagenet.py --auxiliary        # imagenet
 cd RNN && python train.py                                 # PTB
 ```
 
@@ -66,6 +85,7 @@ cd RNN && python train.py                                 # PTB
 Package graphviz is required to visualize the learned cells, visulize the best reported architectures in this paper
 ```
 cd CNN && python visualize.py Random_NSAS 
+cd CNN && python visualize.py Random_NSAS_C
 cd RNN && python visualize.py Random_NSAS 
 ```
 ## Codes and Experimental results on NAS-Bench-201
@@ -83,5 +103,6 @@ If you use our code in your research, please cite our paper accordingly.
   year={2020}
 }
 ```
+
 
 
