@@ -13,23 +13,16 @@ Please download the CIFAR100 dataset in https://www.cs.toronto.edu/~kriz/cifar-1
 
 ## Pretrained models
 
-* Test on CIFAR10 with the best reported architecture trained with 600 epochs
+
+* Test on CIFAR10 with the best reported architecture
 
 ```
-cd CNN && python test.py --auxiliary --model_path ./trained_models/Random_NSAS_CIFAR10_600.pt
-```
-* Expected result: 2.64% test error rate with 3.08M model params.
-
-
-* Test on CIFAR10 with the best reported architecture trained with 1000 epochs
-
-```
-cd CNN && python test.py --auxiliary --model_path ./trained_models/Random_NSAS_CIFAR10_1000.pt
+cd CNN && python test.py --auxiliary --model_path ./trained_models/Random_NSAS_CIFAR10_best.pt
 ```
 * Expected result: 2.50% test error rate with 3.08M model params.
 
 
-* Test on CIFAR100 with the best reported architecture
+* Test on CIFAR100 with the best reported architecture with NSAS
 ```
 cd CNN && python test_100.py --auxiliary --model_path ./trained_models/Random_NSAS_CIFAR100.pt
 
@@ -37,12 +30,12 @@ cd CNN && python test_100.py --auxiliary --model_path ./trained_models/Random_NS
 * Expected result: 17.56% top1 test error with 3.13M  model params.
 
 
-* Test on CIFAR100 with the best reported architecture with 50 initial filters
+* Test on CIFAR100 with the best reported architecture with NSAS-C
 ```
-cd CNN && python test_100.py --auxiliary --init_channels 50 --model_path ./trained_models/Random_NSAS_CIFAR100_50F.pt
+cd CNN && python test_100.py --auxiliary --model_path ./trained_models/Random-NSAS_C_CIFAR100/weights.pt
 
 ```
-* Expected result: 16.85% top1 test error with 5.8M  model params.
+* Expected result: 16.69% top1 test error with 3.59M  model params.
 
 
 

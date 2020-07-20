@@ -23,7 +23,7 @@ parser.add_argument('--data', type=str, default='/data/yanhzhan/imagenet/', help
 parser.add_argument('--batch_size', type=int, default=64, help='batch size')
 parser.add_argument('--report_freq', type=float, default=100, help='report frequency')
 parser.add_argument('--gpu', type=int, default=0, help='gpu device id')
-parser.add_argument('--init_channels', type=int, default=48, help='num of init channels')
+parser.add_argument('--init_channels', type=int, default=50, help='num of init channels')
 parser.add_argument('--layers', type=int, default=14, help='total number of layers')
 parser.add_argument('--model_path', type=str, default='/data/jiahzhao/randomNAS_own/searchers/ENNAS_onImageNet/model_best.pth.tar', help='path of pretrained model')
 parser.add_argument('--auxiliary', action='store_true', default=False, help='use auxiliary tower')
