@@ -104,9 +104,9 @@ class Network(nn.Module):
     s0 = s1 = self.stem(input)
     for i, cell in enumerate(self.cells):
       if cell.reduction:
-        weights = F.softmax(self.alphas_reduce, dim=-1)
+        weights = self.alphas_reduce
       else:
-        weights = F.softmax(self.alphas_normal, dim=-1)
+        weights = self.alphas_normal
 
       
       s0, s1 = s1, cell(s0, s1, weights)
