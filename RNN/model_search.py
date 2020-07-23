@@ -16,7 +16,7 @@ class DARTSCellSearch(DARTSCell):
   def cell(self, x, h_prev, x_mask, h_mask):
     s0 = self._compute_init_state(x, h_prev, x_mask, h_mask)
     s0 = self.bn(s0)
-    probs = self.weights
+    probs = self.weights####if you want to only activate one path, please change here to different from RandomNAS
 
     offset = 0
     states = s0.unsqueeze(0)

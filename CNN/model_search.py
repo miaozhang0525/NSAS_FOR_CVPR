@@ -104,7 +104,7 @@ class Network(nn.Module):
     s0 = s1 = self.stem(input)
     for i, cell in enumerate(self.cells):
       if cell.reduction:
-        weights = self.alphas_reduce
+        weights = self.alphas_reduce#####if you want to only activate one path, please change here to different from RandomNAS
       else:
         weights = self.alphas_normal
 
