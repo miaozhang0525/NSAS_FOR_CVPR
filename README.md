@@ -59,8 +59,15 @@ cd RNN && python test.py --model_path ./trained_models/Random_NSAS_PTB.pt
 
 
 ## Architecture search (using small proxy models)
+Conduct architecture search, run
 ```
-Please see the GDAS_NSAS.ipynb, RandomNAS_NSAS.ipynb documents in all folders
+cd CNN && python GDAS_NSAS_demo.py
+cd CNN && python GDAS_NSAS_C_demo.py
+cd CNN && python RandomNAS_NSAS_demo.py
+cd CNN && python RandomNAS_NSAS_C_demo.py
+
+cd CNN && python randomNAS_NSAS_demo.py
+
 ```
 
 ## Architecture evaluation (using full-sized models)
