@@ -6,9 +6,9 @@ This repository is for the "Overcoming Multi-Model Forgetting in One-Shot NAS Wi
 ## Requirements
 ```
 Python == 3.6.2, PyTorch == 1.0.0, cuda-9.0, cudnn7.1-9.0
-
-Please download the CIFAR100 dataset in https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz, and save it in the 'data' folder
 ```
+Please download the CIFAR100 dataset in https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz, and save it in the 'data' folder
+
 
 
 ## Pretrained models
@@ -48,6 +48,15 @@ cd CNN && python test_imagenet.py --auxiliary --model_path ./trained_models/Rand
 * Expected result: 25.5% top1 test error with 5.4M  model params.
 
 
+* Test on ImageNET with NSAS-C based on PDARTS and PC-DARTS experimental settings
+```
+cd CNN && python test_imagenet.py --auxiliary --model_path ./trained_models/Random-NSAS-C with PDARTS setting/model_best.pth.tar --arch  Random_NSAS_C 
+
+```
+* Expected result: 24.68% top1 test error with 5.4M  model params. Please notice that, in the Imagenet architecture evaluation, we follow PDART and PCDARTS to use the warm-up linear learning-rate shceduler. More details could be found in ./trained_models/Random-NSAS-C with PDARTS setting/TRAIN_IMAGENET_PDARTS.ipynb.
+
+
+
 
 * Test on PTB
 ```
@@ -65,8 +74,6 @@ cd CNN && python GDAS_NSAS_demo.py
 cd CNN && python GDAS_NSAS_C_demo.py
 cd CNN && python RandomNAS_NSAS_demo.py
 cd CNN && python RandomNAS_NSAS_C_demo.py
-
-cd CNN && python randomNAS_NSAS_demo.py
 
 ```
 
