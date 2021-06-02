@@ -1,8 +1,6 @@
 ##################################################
 # Copyright (c) Xuanyi Dong [GitHub D-X-Y], 2019 #
 ##############################################################################
-# Random Search and Reproducibility for Neural Architecture Search, UAI 2019 # 
-##############################################################################
 import torch, random
 import torch.nn as nn
 from copy import deepcopy
@@ -92,6 +90,90 @@ class TinyNetworkRANDOM(nn.Module):
             genotypes_com.append( tuple(xlist) )
     arch_com = Structure(genotypes_com )
     return arch_com,operations_com,genotypes_com
+
+
+  def arch_diver(self, operations_pre):
+    genotypes_com = []
+    operations_com=[]
+    for i in range(1, self.max_nodes):
+        xlist = []
+        indx=[0,1,3]
+        m=indx[i-1]
+        for j in range(i):
+            node_str = '{:}<-{:}'.format(i, j)
+            op_name  = random.choice( self.op_names )
+            while op_name==operations_pre[j+m]:
+                op_name  = random.choice( self.op_names )
+
+            xlist.append((op_name, j))
+            operations_com.append(op_name)
+            genotypes_com.append( tuple(xlist) )
+    arch_com = Structure(genotypes_com )
+    return arch_com,operations_com,genotypes_com
+
+  def arch_diver2(self, operations_pre,operations_pre_pre):
+    genotypes_com = []
+    operations_com=[]
+    for i in range(1, self.max_nodes):
+        xlist = []
+        indx=[0,1,3]
+        m=indx[i-1]
+        for j in range(i):
+            node_str = '{:}<-{:}'.format(i, j)
+            op_name  = random.choice( self.op_names )
+            while op_name==operations_pre[j+m] or op_name==operations_pre_pre[j+m]:
+                op_name  = random.choice( self.op_names )
+
+            xlist.append((op_name, j))
+            operations_com.append(op_name)
+            genotypes_com.append( tuple(xlist) )
+    arch_com = Structure(genotypes_com )
+    return arch_com,operations_com,genotypes_com
+
+
+
+  def arch_diver3(self, operations_pre,operations_pre_pre,operations_pre_pre_pre):
+    genotypes_com = []
+    operations_com=[]
+    for i in range(1, self.max_nodes):
+        xlist = []
+        indx=[0,1,3]
+        m=indx[i-1]
+        for j in range(i):
+            node_str = '{:}<-{:}'.format(i, j)
+            op_name  = random.choice( self.op_names )
+            while op_name==operations_pre[j+m] or op_name==operations_pre_pre[j+m] or op_name==operations_pre_pre_pre[j+m]:
+                op_name  = random.choice( self.op_names )
+
+            xlist.append((op_name, j))
+            operations_com.append(op_name)
+            genotypes_com.append( tuple(xlist) )
+    arch_com = Structure(genotypes_com )
+    return arch_com,operations_com,genotypes_com
+
+
+  def arch_diver4(self, operations_pre,operations_pre_pre,operations_pre_pre_pre,operations_pre_pre_pre_pre):
+    genotypes_com = []
+    operations_com=[]
+    for i in range(1, self.max_nodes):
+        xlist = []
+        indx=[0,1,3]
+        m=indx[i-1]
+        for j in range(i):
+            node_str = '{:}<-{:}'.format(i, j)
+            op_name  = random.choice( self.op_names )
+            while op_name==operations_pre[j+m] or op_name==operations_pre_pre[j+m] or op_name==operations_pre_pre_pre[j+m] or op_name==operations_pre_pre_pre_pre[j+m]:
+                op_name  = random.choice( self.op_names )
+
+            xlist.append((op_name, j))
+            operations_com.append(op_name)
+            genotypes_com.append( tuple(xlist) )
+    arch_com = Structure(genotypes_com )
+    return arch_com,operations_com,genotypes_com
+
+
+
+
 
 
   def forward(self, inputs):
